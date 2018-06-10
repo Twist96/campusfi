@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.tochi.campusfi.Notification">
+
+    <!-- TODO: Update blank fragment layout -->
+    <include layout="@layout/single_notification_like_post"/>
+    <include layout="@layout/single_notification_like_with_pic"/>
+    <include layout="@layout/single_notification_comment"/>
+    <include layout="@layout/single_notification_comment_with_pic"/>
+    <include layout="@layout/single_notification_follow"/>
+
+</LinearLayout>

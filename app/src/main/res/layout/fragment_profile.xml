@@ -1,0 +1,248 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.tochi.campusfi.Profile">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/wall"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/davido"
+            android:tint="#6F000000"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/dp"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:src="@drawable/friends"
+            app:civ_border_width="3dp"
+            app:civ_border_color="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/wall"
+            app:layout_constraintBottom_toBottomOf="@id/wall"/>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Martinz Chukwuemeka"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="@android:color/white"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@id/dp"
+            app:layout_constraintEnd_toEndOf="@id/wall"
+            app:layout_constraintStart_toStartOf="@id/wall"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/username">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="30 Posts"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="170 Follwers"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:text="216 Following"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:maxHeight="100dp"
+            android:padding="10dp"
+            android:text="Hello i'm new to this platform and i will like to make new friends
+I don't know what to say again"
+            android:textSize="13sp"
+            android:ems="10"
+            app:layout_constraintTop_toBottomOf="@id/wall" />
+
+
+
+        <ImageView
+            android:id="@+id/schoolIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_school"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bio"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="200dp"
+            android:text="University of Nigeria Nsukka"
+            android:textSize="13sp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="5dp"
+            app:layout_constraintTop_toTopOf="@id/schoolIcon"
+            app:layout_constraintStart_toEndOf="@id/schoolIcon"
+            app:layout_constraintBottom_toBottomOf="@id/schoolIcon"/>
+
+        <ImageView
+            android:id="@+id/departmentIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:padding="4dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/ic_deptartment"
+            app:layout_constraintTop_toBottomOf="@id/schoolIcon"
+            app:layout_constraintStart_toStartOf="@id/schoolIcon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Urban and regional Planning"
+            android:textSize="13sp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="@id/departmentIcon"
+            app:layout_constraintStart_toEndOf="@id/departmentIcon"
+            app:layout_constraintBottom_toBottomOf="@id/departmentIcon"/>
+
+        <ImageView
+            android:id="@+id/link"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:padding="3dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_link_red_24dp"
+            app:layout_constraintTop_toBottomOf="@id/departmentIcon"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="www.inandout.com"
+            android:textColor="@color/colorAccent"
+            android:textSize="13sp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toBottomOf="@id/departmentIcon"
+            app:layout_constraintStart_toEndOf="@id/link"
+            app:layout_constraintBottom_toBottomOf="@id/link"/>
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintTop_toBottomOf="@id/link">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/white"
+                app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp">
+
+                    <ImageView
+                        android:id="@+id/timelineIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="7dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_list_black_24dp"/>
+
+                    <ImageView
+                        android:id="@+id/mediaIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="7dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_media_gray"/>
+
+                    <ImageView
+                        android:id="@+id/tagIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="7dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_tag_gray"/>
+
+                    <ImageView
+                        android:id="@+id/bookmarkIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="7dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_bookmark_border_gray_24dp"/>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <include
+            layout="@layout/main_content_profile"
+            app:layout_constraintTop_toBottomOf="@id/menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="900dp"
+             />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/ic_add_white_24dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

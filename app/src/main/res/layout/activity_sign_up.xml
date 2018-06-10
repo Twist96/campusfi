@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tochi.campusfi.SignUp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="35dp"
+        android:paddingStart="35dp">
+
+        <TextView
+            android:id="@+id/signUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:padding="25dp"
+            android:text="Sign Up"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/fullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:hint="Full name"
+            android:padding="10dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signUp" />
+
+        <Button
+            android:id="@+id/signUpBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/button_boarder"
+            android:onClick="signUpBtn"
+            android:text="Sign up"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/fullName" />
+
+        <LinearLayout
+            android:id="@+id/or"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/signUpBtn"
+            app:layout_constraintBottom_toTopOf="@id/fabF">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="7dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OR"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="7dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/line" />
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="35dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="facebookSignUp"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:fabSize="normal"
+            android:backgroundTint="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/or"
+            app:srcCompat="@drawable/ic_facebook"
+            tools:ignore="VectorDrawableCompat" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="30dp"
+            android:clickable="true"
+            android:onClick="googleSignUp"
+            app:fabSize="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/fabF"
+            app:srcCompat="@drawable/ic_google_plus"
+            tools:ignore="VectorDrawableCompat"
+            android:focusable="true" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center|bottom">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:src="@drawable/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? "
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login."
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
